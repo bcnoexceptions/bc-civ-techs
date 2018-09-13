@@ -1,0 +1,59 @@
+.DiscountSelector {
+	width: 290px;
+	height: 408px;
+	position: absolute;
+	background: white;
+	top: 50%;
+	left: 50%;
+	margin-left: -149px;
+	margin-top: -204px;
+	padding: 0 5px 2px 5px;
+	border: 1px solid rgb(59, 59, 59);
+	animation-name: regularFadeIn;
+	animation-duration: 0.3s;
+	animation-iteration-count: 1;
+	overflow: auto;
+
+	z-index: 1000;
+}
+
+.DiscountSelector h3 {
+	text-align: center;
+	margin: 0;
+}
+
+.DiscountSelector li {
+	list-style: none;
+	margin: 6px 3px;
+	position: relative;
+}
+
+.DiscountSelector li:hover {
+	background-color: #eee;
+}
+
+.DiscountSelector li .deleteButton {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.DiscountSelector li .valueArea {
+	margin-left: 3px;
+}
+
+.DiscountSelector .sliderHolder {
+	margin-top: 2px;
+}
+
+.DiscountSelector .addDiscountHolder {
+	float: left;
+}
+
+.DiscountSelector .confirmDiscountsHolder {
+	float: right;
+}
+
+.DiscountSelector button {
+	font-size: 1.1em;
+}

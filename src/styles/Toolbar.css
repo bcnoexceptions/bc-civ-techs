@@ -1,0 +1,10 @@
+.Toolbar button {
+	margin-left: 3px;
+	height: 24px;
+}
+
+.sortHolder {
+	display: inline-block;
+	background-color: white;
+	padding: 2px 3px;
+}

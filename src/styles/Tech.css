@@ -1,0 +1,200 @@
+.TechDisplay {
+	margin: 1px;
+	position: relative;
+	padding: 3px;
+	overflow: hidden;
+}
+
+.TechDisplay .TechName {
+	margin: 0;
+	font-size: 1.2em;
+}
+
+.TechDisplay .BuyArea,
+.TechDisplay .RemoveArea {
+	background: #96da85;
+	position: absolute;
+	top: 20px;
+	right: 8px;
+	width: 60px;
+	height: 60px;
+	text-align: center;
+	border-top-left-radius: 25px 50px;
+	border-bottom-left-radius: 25px 50px;
+	border-top-right-radius: 25px 50px;
+	border-bottom-right-radius: 25px 50px;
+	border: 1px solid #103605;
+	color: black;
+	cursor: pointer;
+	transition: color 400ms, background-color 400ms;
+}
+
+.TechDisplay .RemoveArea {
+	background: #d6a9a9;
+	border: 1px solid #3a1512;
+}
+
+.TechDisplay .centered {
+	width: 50px;
+}
+
+.TechDisplay .TechDesc span {
+	display: block;
+	height: 85px;
+	white-space: pre-line;
+	overflow: hidden;
+	padding-right: 70px;
+}
+
+.OwnedTechs .TechDisplay .TechDesc span {
+	width: auto;
+	height: 55px;
+}
+
+.BuyableTech .BuyArea:hover {
+	background: #103605;
+	color: white;
+}
+
+.CartTech .RemoveArea:hover {
+	background: #3a1512;
+	color: white;
+}
+
+.AdjustedCost {
+	font-size: 1.25em;
+}
+
+.BaseCost {
+	font-size: 0.7em;
+	font-style: italic;
+}
+
+.Orange {
+	background-color: #ffc481;
+}
+
+.Blue {
+	background-color: #3eb8dd;
+}
+
+.Green {
+	background-color: #81e681;
+}
+
+.Yellow {
+	background-color: #fbfd64;
+}
+
+.Blood {
+	background-color: #940000;
+	color: white;
+}
+
+.Orange.Green {
+	background: linear-gradient(to right, #ffc481 40%, #81e681 60%);
+}
+
+.Blue.Yellow {
+	background: linear-gradient(to right, #3eb8dd 40%, #fbfd64 60%);
+}
+
+.Blood.Blue {
+	background: linear-gradient(to right, #940000 40%, #3eb8dd 60%);
+}
+
+.Green.Blue {
+	background: linear-gradient(to right, #81e681 40%, #3eb8dd 60%);
+}
+
+.Yellow.Green {
+	background: linear-gradient(to right, #fbfd64 40%, #81e681 60%);
+}
+
+.Blood.Yellow {
+	background: linear-gradient(to right, #940000 40%, #fbfd64 60%);
+}
+
+.Blue.Orange {
+	background: linear-gradient(to right, #3eb8dd 40%, #ffc481 60%);
+}
+
+.Green.Blue {
+	background: linear-gradient(to right, #81e681 40%, #3eb8dd 60%);
+}
+
+.Blood.Green {
+	background: linear-gradient(to right, #940000 40%, #81e681 60%);
+}
+
+.TechCardHolder {
+	width: 300px;
+	height: 400px;
+	position: absolute;
+	background: white;
+	top: 50%;
+	left: 50%;
+	margin-left: -149px;
+	margin-top: -199px;
+	border: 1px solid rgb(59, 59, 59);
+	animation-name: regularFadeIn;
+	animation-duration: 0.3s;
+	animation-iteration-count: 1;
+
+	z-index: 1000;
+}
+
+.TechTextArea {
+	padding: 4px;
+}
+
+.TechPrereqs {
+	color: #0b501a;
+	font-weight: bold;
+	margin-bottom: 1em;
+}
+
+.TechLongText {
+	white-space: pre-line;
+	margin-bottom: 1em;
+}
+
+.TechTextArea li {
+	margin-left: 1.5em;
+}
+
+.TotalHolder {
+	text-align: center;
+	font-size: 1.1em;
+}
+
+.DiscountList h3 {
+	margin: 0;
+}
+
+.OwnedTechs .DiscountList {
+	margin-left: 3px;
+}
+
+@media (min-width: 650px) {
+	.TechDisplay .BuyArea,
+	.TechDisplay .RemoveArea {
+		width: 80px;
+	}
+
+	.TechDisplay .centered {
+		width: 70px;
+	}
+
+	.TechCardHolder {
+		width: 400px;
+		height: 400px;
+		margin-left: -199px;
+		margin-top: -199px;
+	}
+
+	.TechDisplay .TechDesc span {
+		padding-right: 100px;
+		height: 75px;
+	}
+}

@@ -1,0 +1,17 @@
+@keyframes modalFadeIn {
+	from {
+		background-color: rgba(0, 0, 0, 0);
+	}
+	to {
+		background-color: rgba(0, 0, 0, 0.7);
+	}
+}
+
+@keyframes regularFadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}

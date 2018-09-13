@@ -1,0 +1,88 @@
+body {
+	max-width: 1100px;
+}
+
+.Toolbar {
+	position: fixed;
+	top: 4px;
+	left: 0;
+	text-align: right;
+	min-width: 340px;
+	max-width: 1050px;
+	width: 100%;
+	padding-right: 3px;
+	box-sizing: border-box;
+	vertical-align: middle;
+}
+
+.CivTechs {
+	min-width: 360px;
+	max-width: 1100px;
+	width: 100%;
+	position: absolute;
+	margin-top: 60px;
+	top: 0px;
+	bottom: 0px;
+	overflow: auto;
+	background: white;
+}
+
+.MainTabs {
+	position: fixed;
+	top: 34px;
+	left: 5px;
+	z-index: 100;
+}
+
+.MainTabs .tab {
+	background: #a7a7a7;
+	color: black;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	display: inline-block;
+	margin-right: 2px;
+	padding: 2px;
+	height: 22px;
+	width: 80px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.MainTabs .tab.active {
+	background: white;
+	color: black;
+}
+
+.AvailableTechs,
+.Cart {
+	width: 50%;
+	min-width: 160px;
+	height: 100%;
+	box-sizing: border-box;
+	overflow: auto;
+}
+
+.AvailableTechs {
+	border-right: 1px solid #3b3b3b;
+}
+
+.Cart {
+	position: absolute;
+	right: 0;
+	top: 0;
+	border-left: 1px solid #3b3b3b;
+}
+
+.empty {
+	margin-left: 3px;
+}
+
+@media (max-width: 650px) {
+	.MainTabs {
+		top: 41px;
+	}
+
+	.MainTabs .tab {
+		height: 15px;
+	}
+}

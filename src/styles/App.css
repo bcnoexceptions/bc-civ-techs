@@ -1,0 +1,159 @@
+html {
+	font: 12px Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	background: black;
+}
+
+@media (min-width: 650px) {
+	html body {
+		font-size: 15px;
+	}
+}
+
+ul,
+li {
+	margin: 0;
+	padding: 0;
+}
+
+body h1 {
+	margin-top: 0.2em;
+	margin-bottom: 0.2em;
+	font-size: 1.3em;
+	text-align: center;
+}
+
+.centered {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+.selectLink {
+	text-decoration: none;
+	text-align: center;
+	display: inline-block;
+	height: 15px;
+	width: 15px;
+	border-radius: 15px;
+	margin-right: 3px;
+	line-height: 100%;
+	transition: color 400ms, background-color 400ms;
+}
+
+.addLink {
+	color: #097a22;
+	background: white;
+}
+
+.removeLink {
+	color: #ad201c;
+	background: white;
+}
+
+.addLink:hover {
+	color: white;
+	background: #097a22;
+}
+
+.removeLink:hover {
+	color: white;
+	background: #ad201c;
+}
+
+.modalLayer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.7);
+	animation-name: modalFadeIn;
+	animation-duration: 0.3s;
+	animation-iteration-count: 1;
+
+	z-index: 500;
+}
+
+.RuleSwitcher {
+	display: inline-block;
+}
+
+.closeButton {
+	background-image: url("../images/close-icon.png");
+	background-size: 100% 100%;
+	display: inline-block;
+	position: absolute;
+	top: 2px;
+	right: 2px;
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+	opacity: 0.3;
+	transition: opacity 400ms;
+}
+
+.closeButton:hover {
+	opacity: 1;
+}
+
+.deleteButton {
+	background-image: url("../images/close-icon.png");
+	background-size: 100% 100%;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+	opacity: 0.3;
+	transition: opacity 400ms;
+}
+
+.deleteButton:hover {
+	opacity: 1;
+}
+
+select,
+button {
+	background-color: #eeeeee;
+}
+
+button {
+	border: 1px solid #383838;
+	cursor: pointer;
+}
+
+button:hover:enabled,
+select:hover:enabled {
+	background: #35bd1a;
+	color: white;
+}
+
+button:active:enabled,
+select:active:enabled {
+	background: #0b4100;
+	color: white;
+}
+
+select:hover:enabled option,
+select:active:enabled option {
+	background: white;
+	color: black;
+}
+
+.BuyCartArea {
+	text-align: right;
+	padding: 3px;
+	font-size: 1.2em;
+}
+
+.BuyCartArea button {
+	font-size: 1.2em;
+}
+
+.modalLayer h2 {
+	margin: 0 0 8px;
+	width: 100%;
+	text-align: center;
+}
