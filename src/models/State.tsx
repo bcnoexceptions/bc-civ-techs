@@ -37,6 +37,29 @@ export class CivState {
  * @returns {number}
  */
 export function getTechCost(tech: Tech, state: CivState): number {
+    if (!tech.color2) {
+        return getMonoColorTechCost(tech, state);
+    }
+
+    // make a copy for each color, use whichever gives more discount
+
+    const firstColorCopy = new Tech(tech.name, tech.color, tech.description, tech.longDesc, tech.baseCost, []);
+    const secondColorCopy = new Tech(tech.name, tech.color2, tech.description, tech.longDesc, tech.baseCost, []);
+
+    const cost1 = getMonoColorTechCost(firstColorCopy, state);
+    const cost2 = getMonoColorTechCost(secondColorCopy, state);
+
+    return Math.min(cost1, cost2);
+}
+
+/**
+ * Determine the cost of a tech, assuming it has just one color
+ *
+ * @param {Tech} tech
+ * @param {CivState} state
+ * @returns {number}
+ */
+function getMonoColorTechCost(tech: Tech, state: CivState): number {
     let result: number = tech.baseCost;
     for (const ownedTech of state.inventory.present.ownedTechs) {
         for (const discount of ownedTech.discounts) {
