@@ -1,4 +1,5 @@
 import * as React from "react";
+import ReloadWarning from "./components/ReloadWarning";
 import DiscountSelector from "./containers/DiscountSelector";
 import HighlightedTechHolder from "./containers/HighlightedTechHolder";
 import RulesSwitcher from "./containers/RuleSwitcher";
@@ -24,6 +25,7 @@ class App extends React.Component {
 				</div>
 				<HighlightedTechHolder />
 				<DiscountSelector />
+				<ReloadWarning />
 			</Aux>
 		);
 	}
